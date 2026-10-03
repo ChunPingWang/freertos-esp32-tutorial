@@ -1,0 +1,3 @@
+# 超級迴圈永遠不會讓出 CPU，idle task 沒有機會執行，
+# 若不關閉 task watchdog，終端機會每 5 秒出現一次警告。
+CONFIG_ESP_TASK_WDT_INIT=n

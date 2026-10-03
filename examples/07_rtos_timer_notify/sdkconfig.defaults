@@ -1,0 +1,5 @@
+# 將 tick 由預設的 100 Hz (10 ms) 提高到 1000 Hz (1 ms)，讓延遲與量測更精細。
+CONFIG_FREERTOS_HZ=1000
+# 軟體計時器的 callback 在 timer service task 中執行，
+# 我們在 callback 裡呼叫 ESP_LOGI，因此把它的堆疊加大（預設 2048 bytes）。
+CONFIG_FREERTOS_TIMER_TASK_STACK_DEPTH=3584
